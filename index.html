@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>combination</title>
+</head>
+<body>
+<form name="forms">
+Enter String : <input type="text" name="str"></br><input type="button" value="enter" onclick="call()">
+</form>
+<p id="demo"></p>
+<script>
+function call(){
+var str1=document.forms.str.value;
+var string=comb(str1);
+document.getElementById('demo').innerHTML=("<b>Combination of string  :"+str1+"</b>: <br>"+string);
+}
+var com=[];
+function comb(str1){
+for(var i=0;i<=str1.length-1;i++){
+for(var j=i;j<=str1.length-1;j++){
+com.push(str1.slice(i,j+1));
+};
+};
+return com;
+}
+</script>
+</body>
+</html>

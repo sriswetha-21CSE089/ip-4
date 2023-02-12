@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+     
+    </head>
+    <body>
+       <form name="forms">
+        enter first real no : <input type="text" name="r1"><br><br>
+        enter second real no : <input type="text" name="r2"><br><br>
+        </form>
+        <button onclick="add1()">enter</button>
+        <p id="demo"></p>
+        <script>
+            function complex(r,i){
+            this.r=r;
+             this.i=i;
+             }
+            function add1()
+            {
+                var n1=document.forms.r1.value;
+                var n2=document.forms.r2.value;
+                var c=n1.indexOf("+");
+                var d=n2.indexOf("+");
+                var a=new complex(Number(n1.substring(0,c)),Number(n1.substring(c+1,n1.length-1)));
+                var b=new complex(Number(n2.substring(0,d)),Number(n2.substring(d+1,n2.length-1)));
+                var real1=a.r+b.r;
+                var imaginary1=a.i+b.i;
+               document.getElementById('demo').innerHTML=("RESULT : "+real1+"+"+imaginary1+"i");
+             }
+          
+        
+           
+        </script>
+    </body>
+</html>
